@@ -1,12 +1,10 @@
 # what3words UI Library 
 
 An Android library to use
-the [what3words v3 API a
+the [what3words v3 API [Autosuggest](https://developer.what3words.com/public-api/docs#autosuggest).
 
-Autosuggest](https://developer.what3words.com/public-api/docs#autosuggest).
-
-### Demo
-<video src='https://user-images.githubusercontent.com/43956851/145692533-1d4235cb-58fe-4e07-a8ca-4e5b2ddd1a49.mp4' width = "200"/>
+Demo
+<video src='https://user-images.githubusercontent.com/43956851/145692533-1d4235cb-58fe-4e07-a8ca-4e5b2ddd1a49.mp4' width = "186"/>
 
 ### Sample app screenshot
 <img src="https://github.com/Pekwerike/what3words/blob/master/screenshotone.png" width="216" height="468"> <img src="https://github.com/Pekwerike/what3words/blob/master/screenshottwo.png" width="216" height="468">  
@@ -327,4 +325,3 @@ repo for examples of how to use the **W3WAutoSuggestText component**.
 - JUnit 
 - Expresso 
 - Kotlin coroutines extension 
-
