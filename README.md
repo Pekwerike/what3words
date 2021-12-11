@@ -1,26 +1,19 @@
-# what3words UI Library 
+# what3words UI 
 
-An Android library to use
-the [what3words v3 API autosuggest](https://developer.what3words.com/public-api/docs#autosuggest).
+what3words UI is a lightweight library that comes with a suite of customizable android UI components that allows you to integrate the full functionalities of the what3words API into your android application without hassle. To get started you need to download this library and get your what3words developer API key by following this [link](https://what3words.com/select-plan).
+
+Demo
+<video src='https://user-images.githubusercontent.com/43956851/145692533-1d4235cb-58fe-4e07-a8ca-4e5b2ddd1a49.mp4' width = "186"/>
 
 ### Sample app screenshot
 <img src="https://github.com/Pekwerike/what3words/blob/master/screenshotone.png" width="216" height="468"> <img src="https://github.com/Pekwerike/what3words/blob/master/screenshottwo.png" width="216" height="468">  
-
-
-To obtain an API key, please
-visit [https://what3words.com/select-plan](https://what3words.com/select-plan) and sign up for an
-account.
-
-### Android minimum SDK support
-
-[![Generic badge](https://img.shields.io/badge/minSdk-23-green.svg)](https://developer.android.com/about/versions/marshmallow/android-6.0/)
 
 
 ## Documentation
 
 See the what3words public API [documentation](https://docs.what3words.com/api/v3/)
 
-## Usage
+## Using in your project
 
 AndroidManifest.xml
 
@@ -172,10 +165,9 @@ public class MainJavaActivity extends AppCompatActivity {
 }
 ```
 
-### More auto suggestion request customizing 
-You can exploit the full auto suggestion request customization features that the what3words API provides by passing an instance of 
-a CustomAutoSuggestRequest class to the what3wordsEditText class using the setCustomAutoSuggestRequest(customAutoSuggestRequest: CustomAutoSuggestRequest) function. 
-You can create an instance of CustomAutoSuggestRequest through the CustomAutoSuggestRequest.Builder. The functions in the Builder are 
+### More auto suggestion request customization
+Exploit the full auto-suggestion request customization features that the what3words API provides by passing an instance of 
+a CustomAutoSuggestRequest class to the what3wordsEditText class using the setCustomAutoSuggestRequest(customAutoSuggestRequest: CustomAutoSuggestRequest) function. You can create an instance of CustomAutoSuggestRequest through the CustomAutoSuggestRequest.Builder. The functions in the Builder are 
 properly documented to guide you along the way. 
 
 ```kotlin
@@ -309,15 +301,14 @@ class CustomAutoSuggestRequest private constructor(
 
 ## Sample app:
 
-If you want to check different ways to use this library please look at the **sample** app in this
-repo for examples of how to use the **W3WAutoSuggestText component**.
+If you want to check different ways to use this library please look at the [**sample**](https://github.com/Pekwerike/what3words/tree/master/sample) app in this
+repository for examples of how to use the **What3WordsEditText component**.
 
 
 
-## Open Source Libraries 
-- what3words android wrapper
-- Mockito 
-- JUnit 
-- Expresso 
-- Kotlin coroutines extension 
-
+## Open Source Libraries Used
+- [what3words android wrapper](https://github.com/what3words/w3w-android-wrapper) - An Android library to use the what3words v3 API.
+- [Mockito](https://site.mockito.org) - Mockito is a mocking framework that tastes really good. It lets you write beautiful tests with a clean & simple API. Mockito doesn’t give you hangover because the tests are very readable and they produce clean verification errors.
+- [JUnit](https://junit.org/junit5/) - JUnit is a simple framework to write repeatable tests. It is an instance of the xUnit architecture for unit testing frameworks.
+- [Expresso](https://developer.android.com/training/testing/espresso) - Espresso is a testing framework for Android to make it easy to write reliable user interface tests.
+- [kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines) - A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously.
