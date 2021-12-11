@@ -306,7 +306,7 @@ repository for examples of how to use the **What3WordsEditText component**.
 
 
 
-## Open Source Libraries 
+## Open Source Libraries Used
 - [what3words android wrapper](https://github.com/what3words/w3w-android-wrapper) - An Android library to use the what3words v3 API.
 - [Mockito](https://site.mockito.org) - Mockito is a mocking framework that tastes really good. It lets you write beautiful tests with a clean & simple API. Mockito doesn’t give you hangover because the tests are very readable and they produce clean verification errors.
 - [JUnit](https://junit.org/junit5/) - JUnit is a simple framework to write repeatable tests. It is an instance of the xUnit architecture for unit testing frameworks.
