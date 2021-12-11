@@ -15,11 +15,6 @@ account.
 
 [![Generic badge](https://img.shields.io/badge/minSdk-23-green.svg)](https://developer.android.com/about/versions/marshmallow/android-6.0/)
 
-### Gradle
-
-```
-implementation 'com.what3words:w3w-android-components:2.1.0'
-```
 
 ## Documentation
 
