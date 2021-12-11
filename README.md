@@ -1,11 +1,11 @@
-# <img src="https://what3words.com/assets/images/w3w_square_red.png" width="64" height="64" alt="what3words">&nbsp;w3w-android-components
+# what3words UI Library 
 
 An Android library to use
 the [what3words v3 API autosuggest](https://developer.what3words.com/public-api/docs#autosuggest).
 
-### Demo
+### Sample app screenshot
+<img src="https://github.com/Pekwerike/what3words/blob/master/screenshotone.png" width="216" height="468"> <img src="https://github.com/Pekwerike/what3words/blob/master/screenshottwo.png" width="216" height="468">  
 
-![alt text](https://github.com/what3words/w3w-autosuggest-edittext-android/blob/master/assets/screen_1.png?raw=true "Screenshot 1")![alt text](https://github.com/what3words/w3w-autosuggest-edittext-android/blob/master/assets/screen_2.png?raw=true "Screenshot 2")![alt text](https://github.com/what3words/w3w-autosuggest-edittext-android/blob/master/assets/screen_3.png?raw=true "Screenshot 3")
 
 To obtain an API key, please
 visit [https://what3words.com/select-plan](https://what3words.com/select-plan) and sign up for an
@@ -160,7 +160,6 @@ public class MainJavaActivity extends AppCompatActivity {
 If you want to check different ways to use this library please look at the **sample** app in this
 repo for examples of how to use the **W3WAutoSuggestText component**.
 
-![alt text](https://github.com/what3words/w3w-autosuggest-edittext-android/blob/master/assets/screen_10.png?raw=true "Screenshot 10")
 
 
 ## Open Source Libraries 
