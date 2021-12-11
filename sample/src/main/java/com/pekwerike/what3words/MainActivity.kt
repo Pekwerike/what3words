@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             }
             setCustomAutoSuggestRequest(
                 CustomAutoSuggestRequest.Builder().apply {
-                    numberOfResults(5)
+                    numberOfResults(4)
                 }.build()
             )
         }

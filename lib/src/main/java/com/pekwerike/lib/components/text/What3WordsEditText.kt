@@ -53,9 +53,9 @@ class What3WordsEditText @JvmOverloads constructor(
     }
 
     /**
-     * Set a special listener to be called when an action is performed
-     * on a suggested what3words address. This function will transform the selected what3word address
-     * to a coordinate that represents the longitude and latitude values for the what3words address.
+     * When an action is done on a proposed what3words address,
+     * this listener is called. This function will convert the selected what3word address
+     * to a value that represents the what3words address's gps coordinates.
      * @param onWhat3WordsAddressSelectedListener implementation
      */
     fun setOnWhat3WordsAddressSelectedListener(onWhat3WordsAddressSelectedListener: OnWhat3WordsAddressSelectedListener) {
