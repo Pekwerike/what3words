@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
 ```
 
 
-Simple usage - Java
+Sample usage - Java
 ```java
 public class MainJavaActivity extends AppCompatActivity {
     private static final String mApiKey = "what3wordsApiKey";
