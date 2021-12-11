@@ -301,7 +301,7 @@ class CustomAutoSuggestRequest private constructor(
 
 ## Sample app:
 
-If you want to check different ways to use this library please look at the [**sample**](https://github.com/Pekwerike/what3words/tree/master/sample) app in this
+I have created a very simple app that helps you see the functionalities of what3words UI in action. Please look at the [**sample**](https://github.com/Pekwerike/what3words/tree/master/sample) app in this
 repository for examples of how to use the **What3WordsEditText component**.
 
 
