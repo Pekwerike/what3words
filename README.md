@@ -1,6 +1,6 @@
 # what3words UI Library 
 
-what3words UI Library is a lightweight library that comes with a suites of customizable android UI component that allows you to integrate the fully functionalities of the what3words API without hassle. To get started you need to download this library, and get your what3words developer API key by following this [link](https://what3words.com/select-plan). 
+what3words UI Library is a lightweight library that comes with a suite of customizable android UI components that allows you to integrate the full functionalities of the what3words API without hassle. To get started you need to download this library and get your what3words developer API key by following this [link](https://what3words.com/select-plan).
 
 Demo
 <video src='https://user-images.githubusercontent.com/43956851/145692533-1d4235cb-58fe-4e07-a8ca-4e5b2ddd1a49.mp4' width = "186"/>
