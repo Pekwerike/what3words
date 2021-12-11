@@ -14,18 +14,11 @@ To obtain an API key, please
 visit [https://what3words.com/select-plan](https://what3words.com/select-plan) and sign up for an
 account.
 
-### Android minimum SDK support
-
-
-
-[![Generic badge](https://img.shields.io/badge/minSdk-23-green.svg)](https://developer.android.com/about/versions/marshmallow/android-6.0/)
-
-
 ## Documentation
 
 See the what3words public API [documentation](https://docs.what3words.com/api/v3/)
 
-## Usage
+## Using in your project
 
 AndroidManifest.xml
 
