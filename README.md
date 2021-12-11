@@ -6,7 +6,7 @@ Demo
 <video src='https://user-images.githubusercontent.com/43956851/145692533-1d4235cb-58fe-4e07-a8ca-4e5b2ddd1a49.mp4' width = "186"/>
 
 ### Sample app screenshot
-<img src="https://github.com/Pekwerike/what3words/blob/master/screenshotone.png" width="216" height="468"> <img src="https://github.com/Pekwerike/what3words/blob/master/screenshottwo.png" width="216" height="468">  
+<img src="https://github.com/Pekwerike/what3words/blob/master/screenshotone.png" width="216" height="468"> <img src="https://github.com/Pekwerike/what3words/blob/master/screenshottwo.png" width="216" height="468"> <img src="https://github.com/Pekwerike/what3words/blob/master/w3wscreenshot3.png" width="216" height="468"> 
 
 
 ## Documentation
