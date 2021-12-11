@@ -10,7 +10,7 @@ import org.junit.Assert.*
 class UtilsTest {
 
     @Test
-    fun `is valid word3words`() {
+    fun `is valid what3words`() {
         val wordOne = "filled.count.soap"
         val wordTwo = "///rain.game.make"
         assertEquals(true, wordOne.isValidW3W())
@@ -18,7 +18,7 @@ class UtilsTest {
     }
 
     @Test
-    fun `is not valid word3words`() {
+    fun `is not valid what3words`() {
         val wordOne = "filled."
         val wordTwo = "___.filled.rain.game"
         val wordThree = "make.me//arat"
