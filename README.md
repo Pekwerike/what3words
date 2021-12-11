@@ -302,7 +302,7 @@ class CustomAutoSuggestRequest private constructor(
 ## Sample app:
 
 I have created a very simple app that helps you see the functionalities of what3words UI in action. Please look at the [**sample**](https://github.com/Pekwerike/what3words/tree/master/sample) app in this
-repository for examples of how to use the **What3WordsEditText component**.
+repository for an example of how to use the **What3WordsEditText component**.
 
 
 
