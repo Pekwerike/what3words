@@ -43,13 +43,14 @@ compileOptions {
 }
 ```
 
-activity_main.xml
+Layout
 
 ```xml
 
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <com.pekwerike.lib.ui.text.What3WordsEditText 
@@ -61,6 +62,27 @@ activity_main.xml
         android:layout_margin="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+or
+
+```xml
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.pekwerike.lib.ui.text.What3WordsEditText 
+        android:id="@+id/what3wordsEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp" />
+
+</LinearLayout>
 ```
 
 Sample usage - Kotlin
