@@ -177,10 +177,9 @@ public class MainJavaActivity extends AppCompatActivity {
 }
 ```
 
-### More auto suggestion request customizing 
-You can exploit the full auto suggestion request customization features that the what3words API provides by passing an instance of 
-a CustomAutoSuggestRequest class to the what3wordsEditText class using the setCustomAutoSuggestRequest(customAutoSuggestRequest: CustomAutoSuggestRequest) function. 
-You can create an instance of CustomAutoSuggestRequest through the CustomAutoSuggestRequest.Builder. The functions in the Builder are 
+### More auto suggestion request customization
+Exploit the full auto-suggestion request customization features that the what3words API provides by passing an instance of 
+a CustomAutoSuggestRequest class to the what3wordsEditText class using the setCustomAutoSuggestRequest(customAutoSuggestRequest: CustomAutoSuggestRequest) function. You can create an instance of CustomAutoSuggestRequest through the CustomAutoSuggestRequest.Builder. The functions in the Builder are 
 properly documented to guide you along the way. 
 
 ```kotlin
@@ -315,13 +314,13 @@ class CustomAutoSuggestRequest private constructor(
 ## Sample app:
 
 If you want to check different ways to use this library please look at the **sample** app in this
-repo for examples of how to use the **W3WAutoSuggestText component**.
+repository for examples of how to use the **What3WordsEditText component**.
 
 
 
 ## Open Source Libraries 
-- what3words android wrapper
-- Mockito 
-- JUnit 
-- Expresso 
-- Kotlin coroutines extension 
+- [what3words android wrapper](https://github.com/what3words/w3w-android-wrapper) - An Android library to use the what3words v3 API.
+- [Mockito](https://site.mockito.org) - Mockito is a mocking framework that tastes really good. It lets you write beautiful tests with a clean & simple API. Mockito doesn’t give you hangover because the tests are very readable and they produce clean verification errors.
+- [JUnit](https://junit.org/junit5/) - JUnit is a simple framework to write repeatable tests. It is an instance of the xUnit architecture for unit testing frameworks.
+- [Expresso](https://developer.android.com/training/testing/espresso) - Espresso is a testing framework for Android to make it easy to write reliable user interface tests.
+- [kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines) - A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously.
