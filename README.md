@@ -1,7 +1,6 @@
 # what3words UI Library 
 
-An Android library to use
-the [what3words v3 API [Autosuggest](https://developer.what3words.com/public-api/docs#autosuggest).
+what3words UI Library is a lightweight library that comes with a suites of customizable android UI component that allows you to integrate the fully functionalities of the what3words API without hassle. To get started you need to download this library, and get your what3words developer API key by following this [link](https://what3words.com/select-plan). 
 
 Demo
 <video src='https://user-images.githubusercontent.com/43956851/145692533-1d4235cb-58fe-4e07-a8ca-4e5b2ddd1a49.mp4' width = "186"/>
@@ -9,10 +8,6 @@ Demo
 ### Sample app screenshot
 <img src="https://github.com/Pekwerike/what3words/blob/master/screenshotone.png" width="216" height="468"> <img src="https://github.com/Pekwerike/what3words/blob/master/screenshottwo.png" width="216" height="468">  
 
-
-To obtain an API key, please
-visit [https://what3words.com/select-plan](https://what3words.com/select-plan) and sign up for an
-account.
 
 ## Documentation
 
