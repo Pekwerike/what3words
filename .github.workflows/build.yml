@@ -1,0 +1,21 @@
+name: what3words-library
+on: [ push ]
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: set up jdk
+        uses: actions/setup0java@v1
+        with:
+          java-version: 11
+
+      - name: run tests
+      - run: ./gradlew test
+
+      - name: build aar
+      -run: ./gradlew assemble
+
+
