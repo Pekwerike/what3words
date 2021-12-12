@@ -10,13 +10,16 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: set up JDK              // 1
+      - name: set up JDK
         uses: actions/setup-java@v1
         with:
           java-version: 11
 
-      - name: run tests                   // 3
+      - name: run tests
         run: ./gradlew test
 
-      - name: build project               // 4
+      - name: run android tests
+        run: ./gradlew connectedAndroidTest
+
+      - name: build project
         run: ./gradlew assemble
