@@ -162,8 +162,7 @@ public class MainJavaActivity extends AppCompatActivity {
 
 ### More auto suggestion request customization
 Exploit the full auto-suggestion request customization features that the what3words API provides by passing an instance of 
-a CustomAutoSuggestRequest class to what3wordsEditText using the setCustomAutoSuggestRequest(customAutoSuggestRequest: CustomAutoSuggestRequest) function. You can create an instance of CustomAutoSuggestRequest through the CustomAutoSuggestRequest.Builder. The functions in the Builder are 
-properly documented to guide you along the way. 
+a CustomAutoSuggestRequest class to what3wordsEditText using the setCustomAutoSuggestRequest(customAutoSuggestRequest: CustomAutoSuggestRequest) function. You can create an instance of CustomAutoSuggestRequest through the CustomAutoSuggestRequest.Builder. The documentation of the functions in the Builder match up with their counterparts in the [what3words android wrapper](https://github.com/what3words/w3w-android-wrapper) with some little modifications to guide you along the way.
 
 ```kotlin
 class CustomAutoSuggestRequest private constructor(
