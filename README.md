@@ -27,10 +27,6 @@ AndroidManifest.xml
 </manifest>
 ```
 
-add this to build.gradle (app level)
-
-```
-
 Layout
 
 ```xml
