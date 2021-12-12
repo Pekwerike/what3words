@@ -36,6 +36,7 @@ class What3WordsEditText @JvmOverloads constructor(
 
     init {
         background = ContextCompat.getDrawable(context, R.drawable.white_gray_border)
+        setTextColor(ContextCompat.getColor(context, R.color.blue))
         hint = resources.getString(R.string.w3w_edit_text_default_hint)
         setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.search_icon, 0)
         setPadding(

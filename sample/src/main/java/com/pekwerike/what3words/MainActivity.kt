@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.pekwerike.lib.domain.CustomAutoSuggestRequest
 import com.pekwerike.lib.components.text.What3WordsEditText
+import com.pekwerike.lib.domain.Coordinates
 
 const val api_key = "2JUTPOT1"
 
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       findViewById<What3WordsEditText>(
+        findViewById<What3WordsEditText>(
             R.id.what_3_words_edit_text
         ).apply {
             setApiKey(api_key)
