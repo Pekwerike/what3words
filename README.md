@@ -1,9 +1,12 @@
 # what3words UI 
 
-what3words UI is an opinionated lightweight UI library that allows you to integrate the full functionalities of the what3words API into your android application without hassle. To get started you need to download this library and get your what3words developer API key by following this [link](https://what3words.com/select-plan).
+what3words UI is an opinionated lightweight UI library that allows you to integrate the full functionalities of the what3words API into your android application without hassle.
+
+
+To get started you need to download this library and get your what3words developer API key by following this [link](https://what3words.com/select-plan).
 
 Demo
-<video src='https://user-images.githubusercontent.com/43956851/145692533-1d4235cb-58fe-4e07-a8ca-4e5b2ddd1a49.mp4' width = "186"/>
+<video src="https://user-images.githubusercontent.com/43956851/145725511-06a4a345-cbee-4a34-9395-f00b49585466.mp4" width = "186"/>
 
 ### Sample app screenshot
 <img src="https://github.com/Pekwerike/what3words/blob/master/screenshots/screenshotone.png" width="216" height="468"> <img src="https://github.com/Pekwerike/what3words/blob/master/screenshots/screenshottwo.png" width="216" height="468"> <img src="https://github.com/Pekwerike/what3words/blob/master/screenshots/shot4.png" width="216" height="468"> 
