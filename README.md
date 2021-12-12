@@ -20,7 +20,7 @@ AndroidManifest.xml
 ```xml
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yourpackage.yourapp">
+    package="com.package.name">
 
     <uses-permission android:name="android.permission.INTERNET" />
     ...
