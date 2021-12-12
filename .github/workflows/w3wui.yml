@@ -6,12 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
       - name: set up jdk
         uses: actions/setup0java@v1
         with:
           java-version: 11
-
       - name: run tests
       - run: ./gradlew test
 
