@@ -1,12 +1,15 @@
 # what3words UI 
 
-what3words UI is an opinionated lightweight UI library that allows you to integrate the full functionalities of the what3words API into your android application without hassle. To get started you need to download this library and get your what3words developer API key by following this [link](https://what3words.com/select-plan).
+what3words UI is an opinionated lightweight UI library that allows you to integrate the full functionalities of the what3words API into your android application without hassle.
+
+
+To get started you need to download this library and get your what3words developer API key by following this [link](https://what3words.com/select-plan).
 
 Demo
-<video src='https://user-images.githubusercontent.com/43956851/145692533-1d4235cb-58fe-4e07-a8ca-4e5b2ddd1a49.mp4' width = "186"/>
+<video src="https://user-images.githubusercontent.com/43956851/145725511-06a4a345-cbee-4a34-9395-f00b49585466.mp4" width = "186"/>
 
 ### Sample app screenshot
-<img src="https://github.com/Pekwerike/what3words/blob/master/screenshots/screenshotone.png" width="216" height="468"> <img src="https://github.com/Pekwerike/what3words/blob/master/screenshots/screenshottwo.png" width="216" height="468"> <img src="https://github.com/Pekwerike/what3words/blob/master/screenshots/w3wscreenshot3.png" width="216" height="468"> 
+<img src="https://github.com/Pekwerike/what3words/blob/master/screenshots/screenshotone.png" width="216" height="468"> <img src="https://github.com/Pekwerike/what3words/blob/master/screenshots/screenshottwo.png" width="216" height="468"> <img src="https://github.com/Pekwerike/what3words/blob/master/screenshots/shot4.png" width="216" height="468"> 
 
 
 ## Documentation
@@ -304,3 +307,29 @@ repository for an example of how to use the **What3WordsEditText component**.
 - [JUnit](https://junit.org/junit5/) - JUnit is a simple framework to write repeatable tests. It is an instance of the xUnit architecture for unit testing frameworks.
 - [Expresso](https://developer.android.com/training/testing/espresso) - Espresso is a testing framework for Android to make it easy to write reliable user interface tests.
 - [kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines) - A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously.
+
+## LICENSE
+```
+MIT License
+
+Copyright (c) 2021 Prosper Ekwerike
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
