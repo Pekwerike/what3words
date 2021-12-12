@@ -30,11 +30,6 @@ AndroidManifest.xml
 add this to build.gradle (app level)
 
 ```
-compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_8
-    targetCompatibility JavaVersion.VERSION_1_8
-}
-```
 
 Layout
 
@@ -167,7 +162,7 @@ public class MainJavaActivity extends AppCompatActivity {
 
 ### More auto suggestion request customization
 Exploit the full auto-suggestion request customization features that the what3words API provides by passing an instance of 
-a CustomAutoSuggestRequest class to the what3wordsEditText class using the setCustomAutoSuggestRequest(customAutoSuggestRequest: CustomAutoSuggestRequest) function. You can create an instance of CustomAutoSuggestRequest through the CustomAutoSuggestRequest.Builder. The functions in the Builder are 
+a CustomAutoSuggestRequest class to what3wordsEditText using the setCustomAutoSuggestRequest(customAutoSuggestRequest: CustomAutoSuggestRequest) function. You can create an instance of CustomAutoSuggestRequest through the CustomAutoSuggestRequest.Builder. The functions in the Builder are 
 properly documented to guide you along the way. 
 
 ```kotlin
