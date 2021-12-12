@@ -76,11 +76,9 @@ class What3WordsEditText @JvmOverloads constructor(
         })
 
         what3wordsSuggestionPicker.setOnSuggestionClickListener { suggestion: Suggestion ->
-            CoroutineScope(Dispatchers.Main).launch {
-                // send request to convert suggestion to coordinate. result will be return asynchronously through
-                // convertedCoordinates flow
-                what3WordsV3Impl?.convertToCoordinates(suggestion)
-            }
+            // send request to convert suggestion to coordinate. result will be return asynchronously through
+            // convertedCoordinates flow
+            what3WordsV3Impl?.convertToCoordinates(suggestion)
         }
     }
 
@@ -127,22 +125,24 @@ class What3WordsEditText @JvmOverloads constructor(
      */
     private fun collectSuggestions() {
         CoroutineScope(Dispatchers.Main).launch {
-
-            what3WordsV3Impl?.suggestions?.collect { autoSuggest: Autosuggest? ->
-                if (autoSuggest == null) {
-                    what3wordsSuggestionPicker.updateSuggestions(listOf())
-                    return@collect
-                }
-                if (autoSuggest.isSuccessful) {
-                    val suggestions = autoSuggest.suggestions.toDomainList()
-                    what3wordsSuggestionPicker.updateSuggestions(suggestions)
-                } else {
-                    // TODO Handle error notification gracefully
+            launch {
+                what3WordsV3Impl?.suggestions?.collect { autoSuggest: Autosuggest? ->
+                    if (autoSuggest == null) {
+                        what3wordsSuggestionPicker.updateSuggestions(listOf())
+                        return@collect
+                    }
+                    if (autoSuggest.isSuccessful) {
+                        val suggestions = autoSuggest.suggestions.toDomainList()
+                        what3wordsSuggestionPicker.updateSuggestions(suggestions)
+                    } else {
+                        // TODO Handle error notification gracefully
+                    }
                 }
             }
-
-            what3WordsV3Impl?.convertedSuggestion?.collect { coordinates: com.pekwerike.lib.domain.Coordinates? ->
-                onWhat3WordsAddressSelectedListener?.onAddressSelected(coordinates!!)
+            launch {
+                what3WordsV3Impl?.convertedSuggestion?.collect { coordinates: com.pekwerike.lib.domain.Coordinates? ->
+                    onWhat3WordsAddressSelectedListener?.onAddressSelected(coordinates!!)
+                }
             }
         }
     }

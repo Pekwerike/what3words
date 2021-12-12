@@ -9,6 +9,6 @@ import kotlinx.coroutines.flow.SharedFlow
 internal interface What3WordsV3Interface {
     val suggestions: SharedFlow<Autosuggest?>
     val convertedSuggestion: SharedFlow<Coordinates>
-    suspend fun convertToCoordinates(suggestion: Suggestion)
+    fun convertToCoordinates(suggestion: Suggestion)
     fun setCustomAutoSuggestionRequest(customAutoSuggestRequest: CustomAutoSuggestRequest)
 }

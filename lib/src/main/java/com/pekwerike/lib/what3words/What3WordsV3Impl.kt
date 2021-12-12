@@ -60,12 +60,13 @@ internal class What3WordsV3Impl(
 
     }
 
-    override suspend fun convertToCoordinates(suggestion: com.pekwerike.lib.domain.Suggestion) {
-        return withContext(Dispatchers.IO) {
-            val result = w3wAndroid.convertToCoordinates(suggestion.words)
-                .execute().coordinates
-            result?.let {
-                _convertedSuggestion.emit(result.toDomain())
+    override fun convertToCoordinates(suggestion: com.pekwerike.lib.domain.Suggestion) {
+        CoroutineScope(Dispatchers.IO).launch {
+            val result = w3wAndroid.convertToCoordinates(suggestion.words).execute()
+            withContext(Dispatchers.Main) {
+                result?.coordinates?.let {
+                    _convertedSuggestion.emit(result.coordinates.toDomain())
+                }
             }
         }
     }
