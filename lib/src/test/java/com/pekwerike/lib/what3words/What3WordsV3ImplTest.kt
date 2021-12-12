@@ -1,10 +1,8 @@
 package com.pekwerike.lib.what3words
 
-import app.cash.turbine.test
 import com.pekwerike.lib.domain.Coordinates
 import com.pekwerike.lib.domain.Suggestion
 import kotlinx.coroutines.runBlocking
-import org.junit.Before
 import org.junit.Test
 import org.junit.Assert.*
 import org.mockito.Mockito.`when`

@@ -2,8 +2,11 @@ package com.pekwerike.lib.components.text
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.ViewGroup
+import android.view.ViewTreeObserver
 import android.widget.*
 import androidx.appcompat.widget.AppCompatEditText
+import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.content.ContextCompat
 import com.pekwerike.lib.InterfaceAdapters.toDomainList
 import com.pekwerike.lib.R
@@ -11,7 +14,6 @@ import com.pekwerike.lib.what3words.What3WordsV3Impl
 import com.pekwerike.lib.domain.CustomAutoSuggestRequest
 import com.pekwerike.lib.domain.Suggestion
 import com.pekwerike.lib.components.recyclerview.What3WordsSuggestionPicker
-import com.pekwerike.lib.components.text.What3WordsEditTextExtension.attachAddressPicker
 import com.what3words.androidwrapper.What3WordsV3
 import com.what3words.javawrapper.response.Autosuggest
 import kotlinx.coroutines.CoroutineScope
@@ -43,7 +45,33 @@ class What3WordsEditText @JvmOverloads constructor(
             paddingBottom
         )
         // attach the auto suggestion picker to the edit text immediately after it becomes visible
-        attachAddressPicker()
+        viewTreeObserver.addOnGlobalLayoutListener(object :
+            ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                val editTextMarginParam: ViewGroup.MarginLayoutParams =
+                    layoutParams as ViewGroup.MarginLayoutParams
+
+                val recyclerViewParams = ViewGroup.MarginLayoutParams(
+                    width,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+
+                what3wordsSuggestionPicker.x = editTextMarginParam.leftMargin.toFloat()
+                what3wordsSuggestionPicker.y = y + height - 3
+
+                val group = parent as? ViewGroup
+                group?.let { viewGroup ->
+                    if (viewGroup is LinearLayout) {
+                        viewGroup.orientation = LinearLayout.VERTICAL
+                    } else if (viewGroup is LinearLayoutCompat) {
+                        viewGroup.orientation = LinearLayoutCompat.VERTICAL
+                    }
+                    viewGroup.addView(what3wordsSuggestionPicker, recyclerViewParams)
+                }
+                viewTreeObserver.removeOnGlobalLayoutListener(this)
+            }
+        })
+
         what3wordsSuggestionPicker.setOnSuggestionClickListener { suggestion: Suggestion ->
             CoroutineScope(Dispatchers.Main).launch {
                 val coordinate = what3WordsV3Impl?.convertToCoordinates(suggestion)
