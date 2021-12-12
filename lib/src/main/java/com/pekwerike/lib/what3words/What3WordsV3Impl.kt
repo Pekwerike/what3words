@@ -4,6 +4,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import com.pekwerike.lib.InterfaceAdapters.toDomain
 import com.pekwerike.lib.InterfaceAdapters.toServerRequest
+import com.pekwerike.lib.domain.Coordinates
 import com.pekwerike.lib.isValidW3W
 import com.pekwerike.lib.domain.CustomAutoSuggestRequest
 import com.what3words.androidwrapper.What3WordsV3
@@ -17,8 +18,15 @@ internal class What3WordsV3Impl(
     private val w3wAndroid: What3WordsV3
 ) : TextWatcher, What3WordsV3Interface {
 
+    /** result from auto suggest call. this flow is observed by the what3wordsEditText to refresh the
+     * suggestion picker**/
     private val _suggestions = MutableSharedFlow<Autosuggest?>(0)
-    val suggestions: SharedFlow<Autosuggest?> = _suggestions
+    override val suggestions: SharedFlow<Autosuggest?> = _suggestions
+
+    /** result from android wrapper convertToCoordinates call. this flow is observed by the what3wordsEditText and the result
+     * is passed to the user through a callback**/
+    private val _convertedSuggestion = MutableSharedFlow<Coordinates>(0)
+    override val convertedSuggestion: SharedFlow<Coordinates> = _convertedSuggestion
 
     private var customAutoSuggestRequest: CustomAutoSuggestRequest? = null
 
@@ -52,10 +60,13 @@ internal class What3WordsV3Impl(
 
     }
 
-    override suspend fun convertToCoordinates(suggestion: com.pekwerike.lib.domain.Suggestion): com.pekwerike.lib.domain.Coordinates {
+    override suspend fun convertToCoordinates(suggestion: com.pekwerike.lib.domain.Suggestion) {
         return withContext(Dispatchers.IO) {
-            w3wAndroid.convertToCoordinates(suggestion.words)
-                .execute().coordinates.toDomain()
+            val result = w3wAndroid.convertToCoordinates(suggestion.words)
+                .execute().coordinates
+            result?.let {
+                _convertedSuggestion.emit(result.toDomain())
+            }
         }
     }
 

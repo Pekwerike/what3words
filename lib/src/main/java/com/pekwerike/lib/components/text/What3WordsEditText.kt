@@ -8,6 +8,7 @@ import android.widget.*
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.Lifecycle
 import com.pekwerike.lib.InterfaceAdapters.toDomainList
 import com.pekwerike.lib.R
 import com.pekwerike.lib.what3words.What3WordsV3Impl
@@ -16,6 +17,7 @@ import com.pekwerike.lib.domain.Suggestion
 import com.pekwerike.lib.components.recyclerview.What3WordsSuggestionPicker
 import com.what3words.androidwrapper.What3WordsV3
 import com.what3words.javawrapper.response.Autosuggest
+import com.what3words.javawrapper.response.Coordinates
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
@@ -75,8 +77,9 @@ class What3WordsEditText @JvmOverloads constructor(
 
         what3wordsSuggestionPicker.setOnSuggestionClickListener { suggestion: Suggestion ->
             CoroutineScope(Dispatchers.Main).launch {
-                val coordinate = what3WordsV3Impl?.convertToCoordinates(suggestion)
-                onWhat3WordsAddressSelectedListener?.onAddressSelected(coordinate!!)
+                // send request to convert suggestion to coordinate. result will be return asynchronously through
+                // convertedCoordinates flow
+                what3WordsV3Impl?.convertToCoordinates(suggestion)
             }
         }
     }
@@ -124,6 +127,7 @@ class What3WordsEditText @JvmOverloads constructor(
      */
     private fun collectSuggestions() {
         CoroutineScope(Dispatchers.Main).launch {
+
             what3WordsV3Impl?.suggestions?.collect { autoSuggest: Autosuggest? ->
                 if (autoSuggest == null) {
                     what3wordsSuggestionPicker.updateSuggestions(listOf())
@@ -135,6 +139,10 @@ class What3WordsEditText @JvmOverloads constructor(
                 } else {
                     // TODO Handle error notification gracefully
                 }
+            }
+
+            what3WordsV3Impl?.convertedSuggestion?.collect { coordinates: com.pekwerike.lib.domain.Coordinates? ->
+                onWhat3WordsAddressSelectedListener?.onAddressSelected(coordinates!!)
             }
         }
     }
