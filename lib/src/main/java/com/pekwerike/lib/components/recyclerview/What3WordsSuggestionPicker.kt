@@ -10,7 +10,7 @@ import com.pekwerike.lib.R
 import com.pekwerike.lib.domain.Suggestion
 import com.pekwerike.lib.components.recyclerview.adapter.What3WordsSuggestionPickerAdapter
 
-class What3WordsSuggestionPicker @JvmOverloads constructor(
+internal class What3WordsSuggestionPicker @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
